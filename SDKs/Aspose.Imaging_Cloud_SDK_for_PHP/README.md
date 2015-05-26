@@ -11,4 +11,4 @@ Add `aspose/imaging-sdk-php` to your `composer.json` file and run `composer upda
         "aspose/imaging-sdk-php": "dev-master"
     }
 }
-``
+```
