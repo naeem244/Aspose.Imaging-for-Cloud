@@ -1,4 +1,4 @@
-# Aspose.Imaging for Cloud
+## Aspose.Imaging for Cloud
 This repository contains examples and SDKs for [Aspose.Imaging for Cloud](http://www.aspose.com/cloud/imaging-api.aspx).
 
 ## Why SDKs?
