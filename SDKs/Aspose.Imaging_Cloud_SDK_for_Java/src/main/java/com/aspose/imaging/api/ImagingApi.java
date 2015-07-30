@@ -608,7 +608,7 @@ try {
     }
   }
   /**
-	* PostImageBmp_ImagingApi_0
+	* PostImageGif
 	* Update parameters of gif image.
 	* @param backgroundColorIndex	Integer	Index of the background color.
 	* @param colorResolution	Integer	Color resolution.
@@ -622,7 +622,7 @@ try {
 	* @return ResponseMessage
 	*/
 
-  public ResponseMessage PostImageBmp_ImagingApi_0 (Integer backgroundColorIndex, Integer colorResolution, Boolean hasTrailer, Boolean interlaced, Boolean isPaletteSorted, Integer pixelAspectRatio, Boolean fromScratch, String outPath, File file) {
+  public ResponseMessage PostImageGif(Integer backgroundColorIndex, Integer colorResolution, Boolean hasTrailer, Boolean interlaced, Boolean isPaletteSorted, Integer pixelAspectRatio, Boolean fromScratch, String outPath, File file) {
     Object postBody = null;
     // verify required params are set
     if(file == null ) {
@@ -1792,7 +1792,7 @@ try {
     }
   }
   /**
-	* PostImageSaveAs_ImagingApi_0
+	* PostImageSaveAs
 	* Perform scaling, cropping and flipping of an image in single request. Image is passed as request body.
 	* @param format	String	Save image in another format. By default format remains the same
 	* @param newWidth	Integer	New Width of the scaled image.
@@ -1807,7 +1807,7 @@ try {
 	* @return ResponseMessage
 	*/
 
-  public ResponseMessage PostImageSaveAs_ImagingApi_0 (String format, Integer newWidth, Integer newHeight, Integer x, Integer y, Integer rectWidth, Integer rectHeight, String rotateFlipMethod, String outPath, File file) {
+  public ResponseMessage PostImageSaveAs(String format, Integer newWidth, Integer newHeight, Integer x, Integer y, Integer rectWidth, Integer rectHeight, String rotateFlipMethod, String outPath, File file) {
     Object postBody = null;
     // verify required params are set
     if(format == null || newWidth == null || newHeight == null || x == null || y == null || rectWidth == null || rectHeight == null || rotateFlipMethod == null || file == null ) {

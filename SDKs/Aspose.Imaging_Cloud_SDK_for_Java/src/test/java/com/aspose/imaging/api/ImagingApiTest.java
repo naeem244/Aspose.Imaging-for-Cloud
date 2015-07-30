@@ -5,6 +5,9 @@
 package com.aspose.imaging.api;
 
 
+import java.io.File;
+import java.net.URISyntaxException;
+
 import com.aspose.imaging.client.ApiException;
 import com.aspose.imaging.model.ImagingResponse;
 import com.aspose.imaging.model.ResponseMessage;
@@ -80,27 +83,32 @@ public class ImagingApiTest {
 	/**
 	 * Test of PostImageBmp method, of class ImagingApi.
 	 */
-//	@Test
-//	public void testPostImageBmp() {
-//		System.out.println("PostImageBmp");
-//		Integer bitsPerPixel = null;
-//		Integer horizontalResolution = null;
-//		Integer verticalResolution = null;
-//		Boolean fromScratch = null;
-//		String outPath = "";
-//		File file = null;
-//
-//		ResponseMessage expResult = new ResponseMessage();
-//		expResult.setStatus("OK");
-//		try {
-//			ResponseMessage result = imaging.PostImageBmp(bitsPerPixel, horizontalResolution, verticalResolution, fromScratch, outPath, file);
-//			assertEquals(expResult.getStatus(), result.getStatus());
-//			
-//		} catch (ApiException apiException) {
-//			System.out.println("exp:" + apiException.getMessage());
-//			assertNull(apiException);
-//		}
-//	}
+	@Test
+	public void testPostImageBmp() {
+		System.out.println("PostImageBmp");
+		Integer bitsPerPixel = 24;
+		Integer horizontalResolution = 300;
+		Integer verticalResolution = 300;
+		Boolean fromScratch = false;
+		String outPath = "updatedImage.bmp";
+		File file = null;
+		String fileName = "test.bmp";
+		try {
+		file = new File(getClass().getResource("/" + fileName).toURI());
+		ResponseMessage expResult = new ResponseMessage();
+		expResult.setStatus("OK");
+		
+			ResponseMessage result = imaging.PostImageBmp(bitsPerPixel, horizontalResolution, verticalResolution, fromScratch, outPath, file);
+			assertEquals(expResult.getStatus(), result.getStatus());
+			
+		} catch (ApiException apiException) {
+			System.out.println("exp:" + apiException.getMessage());
+			assertNull(apiException);
+		} catch (URISyntaxException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
+	}
 
 	/**
 	 * Test of GetCropImage method, of class ImagingApi.
