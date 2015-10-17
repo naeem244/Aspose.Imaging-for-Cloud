@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.images;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,8 +11,8 @@ public class UpdateTiffProperties {
     public static void main(String... args) throws IOException {
         String input = "Sample1.tiff";
         String output = "Sample2.tiff";
-        Path inputFile = Common.getPath(UpdateTiffProperties.class, input);
-        Path outputFile = Common.getPath(UpdateTiffProperties.class, output);
+        Path inputFile = Utils.getPath(UpdateTiffProperties.class, input);
+        Path outputFile = Utils.getPath(UpdateTiffProperties.class, output);
 
         String compression = "ccittfax3";
         String resolutionUnit = "inch";
@@ -23,7 +23,7 @@ public class UpdateTiffProperties {
         String outPath="";
         
         com.aspose.imaging.model.ResponseMessage apiResponse = 
-                Common.getImagingSdk().PostProcessTiff(
+                Utils.getImagingSdk().PostProcessTiff(
                 compression, 
                 resolutionUnit, 
                 bitDepth, 

@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.tiffframes;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,9 +10,9 @@ public class ExtractFrameFromMultiFrameTiffImage {
 
     public static void main(String... args) throws IOException {
         String input = "Sample1.tiff";
-        Path inputFile = Common.getPath(ExtractFrameFromMultiFrameTiffImage.class, input);
+        Path inputFile = Utils.getPath(ExtractFrameFromMultiFrameTiffImage.class, input);
         String output = "Sample2.tiff";
-        Path outputFile = Common.getPath(ExtractFrameFromMultiFrameTiffImage.class, output);
+        Path outputFile = Utils.getPath(ExtractFrameFromMultiFrameTiffImage.class, output);
 
         Integer frameId = 0;
         Integer newWidth = 300;
@@ -25,15 +25,15 @@ public class ExtractFrameFromMultiFrameTiffImage {
         Boolean saveOtherFrames = false;
         String outPath = "";
 
-        Common.getStorageSdk().PutCreate(
+        Utils.getStorageSdk().PutCreate(
                 input,
                 null,
-                Common.STORAGE,
+                Utils.STORAGE,
                 inputFile.toFile()
         );
 
         com.aspose.imaging.model.ResponseMessage apiResponse 
-                = Common.getImagingSdk().GetImageFrame(
+                = Utils.getImagingSdk().GetImageFrame(
                         input, 
                         frameId, 
                         newWidth, 
@@ -45,8 +45,8 @@ public class ExtractFrameFromMultiFrameTiffImage {
                         rotateFlipMethod, 
                         saveOtherFrames, 
                         outPath, 
-                        Common.FOLDER, 
-                        Common.STORAGE
+                        Utils.FOLDER,
+                        Utils.STORAGE
                 );
 
         Files.copy(apiResponse.getInputStream(), outputFile, StandardCopyOption.REPLACE_EXISTING);

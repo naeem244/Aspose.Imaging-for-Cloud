@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.manipulate;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,8 +11,8 @@ public class ResizeImage {
     public static void main(String... args) throws IOException {
         String input = "Sample1.png";
         String output = "Sample2.png";
-        Path inputFile = Common.getPath(ResizeImage.class, input);
-        Path outputFile = Common.getPath(ResizeImage.class, output);
+        Path inputFile = Utils.getPath(ResizeImage.class, input);
+        Path outputFile = Utils.getPath(ResizeImage.class, output);
 
         Integer newWidth = 200;
         Integer newHeight = 200;
@@ -20,7 +20,7 @@ public class ResizeImage {
         String outPath = "";
 
         com.aspose.imaging.model.ResponseMessage apiResponse
-                = Common.getImagingSdk().PostChangeImageScale(
+                = Utils.getImagingSdk().PostChangeImageScale(
                         format,
                         newWidth,
                         newHeight,

@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.manipulate;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,36 +12,36 @@ public class MergeTiffImages {
         String input = "Sample1.tiff";
         String output = "Sample2.tiff";
         String appendWith="append.tiff";
-        Path inputFile = Common.getPath(MergeTiffImages.class, input);
-        Path outputFile = Common.getPath(MergeTiffImages.class, output);
-        Path appendWithFile = Common.getPath(MergeTiffImages.class, appendWith);
+        Path inputFile = Utils.getPath(MergeTiffImages.class, input);
+        Path outputFile = Utils.getPath(MergeTiffImages.class, output);
+        Path appendWithFile = Utils.getPath(MergeTiffImages.class, appendWith);
 
-        Common.getStorageSdk().PutCreate(
+        Utils.getStorageSdk().PutCreate(
                 input,
                 null,
-                Common.STORAGE,
+                Utils.STORAGE,
                 inputFile.toFile()
         );
         
-        Common.getStorageSdk().PutCreate(
+        Utils.getStorageSdk().PutCreate(
                 appendWith,
                 null,
-                Common.STORAGE,
+                Utils.STORAGE,
                 appendWithFile.toFile()
         );
 
-        Common.getImagingSdk().PostTiffAppend(
+        Utils.getImagingSdk().PostTiffAppend(
                 input, 
                 appendWith, 
-                Common.STORAGE, 
-                Common.FOLDER
+                Utils.STORAGE,
+                Utils.FOLDER
         );
 
         com.aspose.storage.model.ResponseMessage sr
-                = Common.getStorageSdk().GetDownload(
+                = Utils.getStorageSdk().GetDownload(
                         input,
                         null,
-                        Common.STORAGE
+                        Utils.STORAGE
                 );
 
         Files.copy(sr.getInputStream(), outputFile, StandardCopyOption.REPLACE_EXISTING);

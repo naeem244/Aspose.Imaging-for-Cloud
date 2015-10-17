@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.images;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,8 +11,8 @@ public class UpdateBmpPropertiesWithoutStorage {
     public static void main(String... args) throws IOException {
         String input = "Sample1.bmp";
         String output = "Sample2.bmp";
-        Path inputFile = Common.getPath(UpdateBmpPropertiesWithoutStorage.class, input);
-        Path outputFile = Common.getPath(UpdateBmpPropertiesWithoutStorage.class, output);
+        Path inputFile = Utils.getPath(UpdateBmpPropertiesWithoutStorage.class, input);
+        Path outputFile = Utils.getPath(UpdateBmpPropertiesWithoutStorage.class, output);
 
         Integer bitsPerPixel = 24;
         Integer horizontalResolution = 300;
@@ -20,7 +20,7 @@ public class UpdateBmpPropertiesWithoutStorage {
         Boolean fromScratch = false;
         String outPath = "";
 
-        com.aspose.imaging.model.ResponseMessage sr = Common.getImagingSdk().PostImageBmp(
+        com.aspose.imaging.model.ResponseMessage sr = Utils.getImagingSdk().PostImageBmp(
                 bitsPerPixel,
                 horizontalResolution,
                 verticalResolution,

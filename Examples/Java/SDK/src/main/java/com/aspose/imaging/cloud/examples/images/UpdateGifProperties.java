@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.images;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,8 +11,8 @@ public class UpdateGifProperties {
     public static void main(String... args) throws IOException {
         String input = "Sample1.gif";
         String output = "Sample2.gif";
-        Path inputFile = Common.getPath(UpdateGifProperties.class, input);
-        Path outputFile = Common.getPath(UpdateGifProperties.class, output);
+        Path inputFile = Utils.getPath(UpdateGifProperties.class, input);
+        Path outputFile = Utils.getPath(UpdateGifProperties.class, output);
 
         Integer backgroundColorIndex = 255;
         Integer colorResolution = 7;
@@ -23,14 +23,14 @@ public class UpdateGifProperties {
         Boolean fromScratch = false;
         String outPath = "";
 
-        Common.getStorageSdk().PutCreate(
+        Utils.getStorageSdk().PutCreate(
                 input,
                 null,
-                Common.STORAGE,
+                Utils.STORAGE,
                 inputFile.toFile()
         );
 
-        Common.getImagingSdk().GetImageGif(
+        Utils.getImagingSdk().GetImageGif(
                 input,
                 backgroundColorIndex,
                 colorResolution,
@@ -40,15 +40,15 @@ public class UpdateGifProperties {
                 pixelAspectRatio,
                 fromScratch,
                 outPath,
-                Common.FOLDER,
-                Common.STORAGE
+                Utils.FOLDER,
+                Utils.STORAGE
         );
 
         com.aspose.storage.model.ResponseMessage sr
-                = Common.getStorageSdk().GetDownload(
+                = Utils.getStorageSdk().GetDownload(
                         input,
                         null,
-                        Common.STORAGE
+                        Utils.STORAGE
                 );
 
         Files.copy(sr.getInputStream(), outputFile, StandardCopyOption.REPLACE_EXISTING);

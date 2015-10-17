@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.manipulate;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,8 +11,8 @@ public class PerformSeveralOperationsOnImage {
     public static void main(String... args) throws IOException {
         String input = "Sample1.jpg";
         String output = "Sample2.jpg";
-        Path inputFile = Common.getPath(PerformSeveralOperationsOnImage.class, input);
-        Path outputFile = Common.getPath(PerformSeveralOperationsOnImage.class, output);
+        Path inputFile = Utils.getPath(PerformSeveralOperationsOnImage.class, input);
+        Path outputFile = Utils.getPath(PerformSeveralOperationsOnImage.class, output);
 
         String format = "jpg";
         Integer newWidth = 200;
@@ -25,7 +25,7 @@ public class PerformSeveralOperationsOnImage {
         String outPath = "";
 
         com.aspose.imaging.model.ResponseMessage apiResponse
-                = Common.getImagingSdk().PostImageSaveAs(
+                = Utils.getImagingSdk().PostImageSaveAs(
                         format, 
                         newWidth, 
                         newHeight, 

@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.manipulate;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,8 +11,8 @@ public class CropImageWithFormatChange {
     public static void main(String... args) throws IOException {
         String input = "Sample1.png";
         String output = "Sample2.jpg";
-        Path inputFile = Common.getPath(CropImageWithFormatChange.class, input);
-        Path outputFile = Common.getPath(CropImageWithFormatChange.class, output);
+        Path inputFile = Utils.getPath(CropImageWithFormatChange.class, input);
+        Path outputFile = Utils.getPath(CropImageWithFormatChange.class, output);
 
         Integer x = 30;
         Integer y = 40;
@@ -21,15 +21,15 @@ public class CropImageWithFormatChange {
         String format = "jpg";
         String outPath = "";
 
-        Common.getStorageSdk().PutCreate(
+        Utils.getStorageSdk().PutCreate(
                 input,
                 null,
-                Common.STORAGE,
+                Utils.STORAGE,
                 inputFile.toFile()
         );
 
         com.aspose.imaging.model.ResponseMessage apiResponse
-                = Common.getImagingSdk().GetCropImage(
+                = Utils.getImagingSdk().GetCropImage(
                         input,
                         format,
                         x,
@@ -37,8 +37,8 @@ public class CropImageWithFormatChange {
                         width,
                         height,
                         outPath,
-                        Common.FOLDER,
-                        Common.STORAGE
+                        Utils.FOLDER,
+                        Utils.STORAGE
                 );
 
         Files.copy(apiResponse.getInputStream(), outputFile, StandardCopyOption.REPLACE_EXISTING);

@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.images;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Path;
 
@@ -8,20 +8,20 @@ public class GetImageProperties {
 
     public static void main(String... args) throws IOException {
         String input = "Sample1.tiff";
-        Path inputFile = Common.getPath(GetImageProperties.class, input);
+        Path inputFile = Utils.getPath(GetImageProperties.class, input);
 
-        Common.getStorageSdk().PutCreate(
+        Utils.getStorageSdk().PutCreate(
                 input,
                 null,
-                Common.STORAGE,
+                Utils.STORAGE,
                 inputFile.toFile()
         );
 
         com.aspose.imaging.model.ImagingResponse apiResponse
-                = Common.getImagingSdk().GetImageProperties(
+                = Utils.getImagingSdk().GetImageProperties(
                         input,
-                        Common.FOLDER,
-                        Common.STORAGE
+                        Utils.FOLDER,
+                        Utils.STORAGE
                 );
 
         System.out.println(" Image Property : Height = " +apiResponse.getHeight());

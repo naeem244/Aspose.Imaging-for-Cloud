@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.manipulate;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,16 +11,16 @@ public class ConvertTiffImagetoFaxFormat {
     public static void main(String... args) throws IOException {
         String input = "Sample1.tiff";
         String output = "Sample2.tif";
-        Path inputFile = Common.getPath(ConvertTiffImagetoFaxFormat.class, input);
-        Path outputFile = Common.getPath(ConvertTiffImagetoFaxFormat.class, output);
+        Path inputFile = Utils.getPath(ConvertTiffImagetoFaxFormat.class, input);
+        Path outputFile = Utils.getPath(ConvertTiffImagetoFaxFormat.class, output);
         
         String outPath = "";
 
         com.aspose.imaging.model.ResponseMessage apiResponse
-                = Common.getImagingSdk().GetTiffToFax(
+                = Utils.getImagingSdk().GetTiffToFax(
                         input, 
-                        Common.STORAGE, 
-                        Common.FOLDER, 
+                        Utils.STORAGE,
+                        Utils.FOLDER,
                         outPath
                 );
 

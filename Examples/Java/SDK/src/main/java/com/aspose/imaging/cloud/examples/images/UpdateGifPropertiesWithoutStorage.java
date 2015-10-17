@@ -1,6 +1,6 @@
 package com.aspose.imaging.cloud.examples.images;
 
-import com.aspose.imaging.cloud.examples.Common;
+import com.aspose.imaging.cloud.examples.Utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,8 +11,8 @@ public class UpdateGifPropertiesWithoutStorage {
     public static void main(String... args) throws IOException {
         String input = "Sample1.gif";
         String output = "Sample2.gif";
-        Path inputFile = Common.getPath(UpdateGifPropertiesWithoutStorage.class, input);
-        Path outputFile = Common.getPath(UpdateGifPropertiesWithoutStorage.class, output);
+        Path inputFile = Utils.getPath(UpdateGifPropertiesWithoutStorage.class, input);
+        Path outputFile = Utils.getPath(UpdateGifPropertiesWithoutStorage.class, output);
 
         Integer backgroundColorIndex = 255;
         Integer colorResolution = 7;
@@ -23,7 +23,7 @@ public class UpdateGifPropertiesWithoutStorage {
         Boolean fromScratch = false;
         String outPath = "";
 
-        com.aspose.imaging.model.ResponseMessage sr = Common.getImagingSdk().PostImageGif(
+        com.aspose.imaging.model.ResponseMessage sr = Utils.getImagingSdk().PostImageGif(
                 backgroundColorIndex,
                 colorResolution,
                 hasTrailer,
