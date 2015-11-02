@@ -665,6 +665,105 @@ class ImagingApi {
         $responseObject = $this->apiClient->deserialize($response, 'ResponseMessage');
         return $responseObject;
     }
+    
+        /**
+     * PostImageGif
+     * Update parameters of Gif image.
+     
+     * backgroundColorIndex, integer: Index of the background color. (optional)
+
+     * colorResolution, integer: Color resolution. (optional)
+
+     * hasTrailer, bool: Specifies if image has trailer. (optional)
+
+     * interlaced, bool: Specifies if image is interlaced. (optional)
+
+     * isPaletteSorted, bool: Specifies if palette is sorted. (optional)
+
+     * pixelAspectRatio, integer: Pixel aspect ratio. (optional)
+
+     * fromScratch, bool: Specifies where additional parameters we do not support should be taken from. If this is true – they will be taken from default values for standard image, if it is false – they will be saved from current image. Default is false. (optional)
+
+     * outPath, string: Path to updated file, if this is empty, response contains streamed image. (optional)
+
+     * file, string: File. (required)
+
+     * @return ResponseMessage
+     */
+    public function PostImageGif($backgroundColorIndex = null, $colorResolution = null, $hasTrailer = null, $interlaced = null, $isPaletteSorted = null, $pixelAspectRatio = null, $fromScratch = null, $outPath = null, $file = null) {
+        // verify required params are set
+        if ($file == '') {
+            throw new Exception("missing required params");
+        }
+        //parse inputs
+        //$resourcePath = "/imaging/{name}/gif/?appSid={appSid}&amp;backgroundColorIndex={backgroundColorIndex}&amp;colorResolution={colorResolution}&amp;hasTrailer={hasTrailer}&amp;interlaced={interlaced}&amp;isPaletteSorted={isPaletteSorted}&amp;pixelAspectRatio={pixelAspectRatio}&amp;fromScratch={fromScratch}&amp;outPath={outPath}&amp;folder={folder}&amp;storage={storage}";
+	$resourcePath = '/imaging/gif/?appSid={appSid}&amp;backgroundColorIndex={backgroundColorIndex}&amp;colorResolution={colorResolution}&amp;hasTrailer={hasTrailer}&amp;interlaced={interlaced}&amp;isPaletteSorted={isPaletteSorted}&amp;pixelAspectRatio={pixelAspectRatio}&amp;fromScratch={fromScratch}&amp;outPath={outPath}';
+        
+        //$resourcePath = str_replace("{format}", "json", $resourcePath);
+        $resourcePath = str_replace("toFormat={toFormat}", "format={format}", str_replace("/?", "?", str_replace("&amp;", "&", str_replace("\\*", "", $resourcePath))));
+        $method = "POST";
+        $queryParams = array();
+        $headerParams = array();
+        $headerParams['Accept'] = 'application/xml,application/octet-stream';
+        $headerParams['Content-Type'] = 'multipart/form-data';
+
+        if ($backgroundColorIndex != null) {
+            $resourcePath = str_replace("{" . "backgroundColorIndex" . "}", $this->apiClient->toQueryValue($backgroundColorIndex), $resourcePath);
+        } else {
+            $resourcePath = str_replace("&backgroundColorIndex={" . "backgroundColorIndex" . "}", "", $resourcePath);
+        }
+        if ($colorResolution != null) {
+            $resourcePath = str_replace("{" . "colorResolution" . "}", $this->apiClient->toQueryValue($colorResolution), $resourcePath);
+        } else {
+            $resourcePath = str_replace("&colorResolution={" . "colorResolution" . "}", "", $resourcePath);
+        }
+        if ($hasTrailer != null) {
+            $resourcePath = str_replace("{" . "hasTrailer" . "}", $this->apiClient->toQueryValue($hasTrailer), $resourcePath);
+        } else {
+            $resourcePath = str_replace("&hasTrailer={" . "hasTrailer" . "}", "", $resourcePath);
+        }
+        if ($interlaced != null) {
+            $resourcePath = str_replace("{" . "interlaced" . "}", $this->apiClient->toQueryValue($interlaced), $resourcePath);
+        } else {
+            $resourcePath = str_replace("&interlaced={" . "interlaced" . "}", "", $resourcePath);
+        }
+        if ($isPaletteSorted != null) {
+            $resourcePath = str_replace("{" . "isPaletteSorted" . "}", $this->apiClient->toQueryValue($isPaletteSorted), $resourcePath);
+        } else {
+            $resourcePath = str_replace("&isPaletteSorted={" . "isPaletteSorted" . "}", "", $resourcePath);
+        }
+        if ($pixelAspectRatio != null) {
+            $resourcePath = str_replace("{" . "pixelAspectRatio" . "}", $this->apiClient->toQueryValue($pixelAspectRatio), $resourcePath);
+        } else {
+            $resourcePath = str_replace("&pixelAspectRatio={" . "pixelAspectRatio" . "}", "", $resourcePath);
+        }
+        if ($fromScratch != null) {
+            $resourcePath = str_replace("{" . "fromScratch" . "}", $this->apiClient->toQueryValue($fromScratch), $resourcePath);
+        } else {
+            $resourcePath = str_replace("&fromScratch={" . "fromScratch" . "}", "", $resourcePath);
+        }
+        if ($outPath != null) {
+            $resourcePath = str_replace("{" . "outPath" . "}", $this->apiClient->toQueryValue($outPath), $resourcePath);
+        } else {
+            $resourcePath = str_replace("&outPath={" . "outPath" . "}", "", $resourcePath);
+        }
+
+        //make the API Call
+        if (!isset($body)) {
+            $body = null;
+        }
+        if (isset($file)) {
+            $body = $file;
+        }
+        $response = $this->apiClient->callAPI($resourcePath, $method, $queryParams, $body, $headerParams);
+
+        if (!$response) {
+            return null;
+        }
+
+        $responseObject = $this->apiClient->deserialize($response, 'ResponseMessage');
+        return $responseObject;
+    }
 
     /**
      * PostImageBmp_ImagingApi_0
@@ -695,7 +794,7 @@ class ImagingApi {
             throw new Exception("missing required params");
         }
         //parse inputs
-        $resourcePath = "/imaging/gif/?appSid={appSid}&amp;backgroundColorIndex={backgroundColorIndex}&amp;colorResolution={colorResolution}&amp;hasTrailer={hasTrailer}&amp;interlaced={interlaced}&amp;isPaletteSorted={isPaletteSorted}&amp;pixelAspectRatio={pixelAspectRatio}&amp;fromScratch={fromScratch}&amp;outPath={outPath}";
+        $resourcePath = "/imaging/bmp/?appSid={appSid}&amp;backgroundColorIndex={backgroundColorIndex}&amp;colorResolution={colorResolution}&amp;hasTrailer={hasTrailer}&amp;interlaced={interlaced}&amp;isPaletteSorted={isPaletteSorted}&amp;pixelAspectRatio={pixelAspectRatio}&amp;fromScratch={fromScratch}&amp;outPath={outPath}";
         //$resourcePath = str_replace("{format}", "json", $resourcePath);
         $resourcePath = str_replace("toFormat={toFormat}", "format={format}", str_replace("/?", "?", str_replace("&amp;", "&", str_replace("\\*", "", $resourcePath))));
         $method = "POST";
