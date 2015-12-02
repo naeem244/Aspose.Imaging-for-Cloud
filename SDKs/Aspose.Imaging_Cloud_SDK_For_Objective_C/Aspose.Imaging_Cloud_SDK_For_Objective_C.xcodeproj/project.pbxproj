@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		303BE1781C0EAB5C0071FC88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1771C0EAB5C0071FC88 /* main.m */; };
+		303BE17B1C0EAB5C0071FC88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE17A1C0EAB5C0071FC88 /* AppDelegate.m */; };
+		303BE17E1C0EAB5C0071FC88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE17D1C0EAB5C0071FC88 /* ViewController.m */; };
+		303BE1811C0EAB5C0071FC88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303BE17F1C0EAB5C0071FC88 /* Main.storyboard */; };
+		303BE1831C0EAB5C0071FC88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1821C0EAB5C0071FC88 /* Assets.xcassets */; };
+		303BE1861C0EAB5C0071FC88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1841C0EAB5C0071FC88 /* LaunchScreen.storyboard */; };
+		303BE1B81C0EAC340071FC88 /* ASPImagingApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE19E1C0EAC340071FC88 /* ASPImagingApi.m */; };
+		303BE1B91C0EAC340071FC88 /* ASPBmpProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1A11C0EAC340071FC88 /* ASPBmpProperties.m */; };
+		303BE1BA1C0EAC340071FC88 /* ASPExifData.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1A31C0EAC340071FC88 /* ASPExifData.m */; };
+		303BE1BB1C0EAC340071FC88 /* ASPGifProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1A51C0EAC340071FC88 /* ASPGifProperties.m */; };
+		303BE1BC1C0EAC340071FC88 /* ASPImagingResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1A71C0EAC340071FC88 /* ASPImagingResponse.m */; };
+		303BE1BD1C0EAC340071FC88 /* ASPJfifData.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1A91C0EAC340071FC88 /* ASPJfifData.m */; };
+		303BE1BE1C0EAC340071FC88 /* ASPJpegExifData.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1AB1C0EAC340071FC88 /* ASPJpegExifData.m */; };
+		303BE1BF1C0EAC340071FC88 /* ASPJpegProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1AD1C0EAC340071FC88 /* ASPJpegProperties.m */; };
+		303BE1C01C0EAC340071FC88 /* ASPPngProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1AF1C0EAC340071FC88 /* ASPPngProperties.m */; };
+		303BE1C11C0EAC340071FC88 /* ASPPsdProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1B11C0EAC340071FC88 /* ASPPsdProperties.m */; };
+		303BE1C21C0EAC340071FC88 /* ASPTiffFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1B31C0EAC340071FC88 /* ASPTiffFrame.m */; };
+		303BE1C31C0EAC340071FC88 /* ASPTiffOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1B51C0EAC340071FC88 /* ASPTiffOptions.m */; };
+		303BE1C41C0EAC340071FC88 /* ASPTiffProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1B71C0EAC340071FC88 /* ASPTiffProperties.m */; };
+		303BE1D21C0EAC3E0071FC88 /* ASPImagingApiTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE1C61C0EAC3E0071FC88 /* ASPImagingApiTestCase.m */; };
+		303BE1D31C0EAC3E0071FC88 /* aspose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1C81C0EAC3E0071FC88 /* aspose.jpg */; };
+		303BE1D41C0EAC3E0071FC88 /* aspose_imaging_for_cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1C91C0EAC3E0071FC88 /* aspose_imaging_for_cloud.png */; };
+		303BE1D51C0EAC3E0071FC88 /* demo.tif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CA1C0EAC3E0071FC88 /* demo.tif */; };
+		303BE1D61C0EAC3E0071FC88 /* sample-multi.tif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CB1C0EAC3E0071FC88 /* sample-multi.tif */; };
+		303BE1D71C0EAC3E0071FC88 /* sample.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CC1C0EAC3E0071FC88 /* sample.bmp */; };
+		303BE1D81C0EAC3E0071FC88 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CD1C0EAC3E0071FC88 /* sample.gif */; };
+		303BE1D91C0EAC3E0071FC88 /* sample.psd in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CE1C0EAC3E0071FC88 /* sample.psd */; };
+		303BE1DA1C0EAC3E0071FC88 /* sample.tif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CF1C0EAC3E0071FC88 /* sample.tif */; };
+		303BE1DB1C0EAC3E0071FC88 /* test.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1D01C0EAC3E0071FC88 /* test.bmp */; };
+		303BE1DC1C0EAC3E0071FC88 /* TestDemo.tif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1D11C0EAC3E0071FC88 /* TestDemo.tif */; };
+		303BE1DD1C0EAC490071FC88 /* aspose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1C81C0EAC3E0071FC88 /* aspose.jpg */; };
+		303BE1DE1C0EAC490071FC88 /* aspose_imaging_for_cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1C91C0EAC3E0071FC88 /* aspose_imaging_for_cloud.png */; };
+		303BE1DF1C0EAC490071FC88 /* demo.tif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CA1C0EAC3E0071FC88 /* demo.tif */; };
+		303BE1E01C0EAC490071FC88 /* sample-multi.tif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CB1C0EAC3E0071FC88 /* sample-multi.tif */; };
+		303BE1E11C0EAC490071FC88 /* sample.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CC1C0EAC3E0071FC88 /* sample.bmp */; };
+		303BE1E21C0EAC490071FC88 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CD1C0EAC3E0071FC88 /* sample.gif */; };
+		303BE1E31C0EAC490071FC88 /* sample.psd in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CE1C0EAC3E0071FC88 /* sample.psd */; };
+		303BE1E41C0EAC490071FC88 /* sample.tif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1CF1C0EAC3E0071FC88 /* sample.tif */; };
+		303BE1E51C0EAC490071FC88 /* test.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1D01C0EAC3E0071FC88 /* test.bmp */; };
+		303BE1E61C0EAC490071FC88 /* TestDemo.tif in Resources */ = {isa = PBXBuildFile; fileRef = 303BE1D11C0EAC3E0071FC88 /* TestDemo.tif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		303BE18D1C0EAB5C0071FC88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 303BE16B1C0EAB5C0071FC88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 303BE1721C0EAB5C0071FC88;
+			remoteInfo = Aspose.Imaging_Cloud_SDK_For_Objective_C;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		303BE1731C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aspose.Imaging_Cloud_SDK_For_Objective_C.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		303BE1771C0EAB5C0071FC88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		303BE1791C0EAB5C0071FC88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		303BE17A1C0EAB5C0071FC88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		303BE17C1C0EAB5C0071FC88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		303BE17D1C0EAB5C0071FC88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		303BE1801C0EAB5C0071FC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		303BE1821C0EAB5C0071FC88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		303BE1851C0EAB5C0071FC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		303BE1871C0EAB5C0071FC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303BE18C1C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Aspose.Imaging_Cloud_SDK_For_Objective_CTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		303BE1921C0EAB5C0071FC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303BE19D1C0EAC340071FC88 /* ASPImagingApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPImagingApi.h; sourceTree = "<group>"; };
+		303BE19E1C0EAC340071FC88 /* ASPImagingApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPImagingApi.m; sourceTree = "<group>"; };
+		303BE1A01C0EAC340071FC88 /* ASPBmpProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPBmpProperties.h; sourceTree = "<group>"; };
+		303BE1A11C0EAC340071FC88 /* ASPBmpProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPBmpProperties.m; sourceTree = "<group>"; };
+		303BE1A21C0EAC340071FC88 /* ASPExifData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPExifData.h; sourceTree = "<group>"; };
+		303BE1A31C0EAC340071FC88 /* ASPExifData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPExifData.m; sourceTree = "<group>"; };
+		303BE1A41C0EAC340071FC88 /* ASPGifProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPGifProperties.h; sourceTree = "<group>"; };
+		303BE1A51C0EAC340071FC88 /* ASPGifProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPGifProperties.m; sourceTree = "<group>"; };
+		303BE1A61C0EAC340071FC88 /* ASPImagingResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPImagingResponse.h; sourceTree = "<group>"; };
+		303BE1A71C0EAC340071FC88 /* ASPImagingResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPImagingResponse.m; sourceTree = "<group>"; };
+		303BE1A81C0EAC340071FC88 /* ASPJfifData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPJfifData.h; sourceTree = "<group>"; };
+		303BE1A91C0EAC340071FC88 /* ASPJfifData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPJfifData.m; sourceTree = "<group>"; };
+		303BE1AA1C0EAC340071FC88 /* ASPJpegExifData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPJpegExifData.h; sourceTree = "<group>"; };
+		303BE1AB1C0EAC340071FC88 /* ASPJpegExifData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPJpegExifData.m; sourceTree = "<group>"; };
+		303BE1AC1C0EAC340071FC88 /* ASPJpegProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPJpegProperties.h; sourceTree = "<group>"; };
+		303BE1AD1C0EAC340071FC88 /* ASPJpegProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPJpegProperties.m; sourceTree = "<group>"; };
+		303BE1AE1C0EAC340071FC88 /* ASPPngProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPPngProperties.h; sourceTree = "<group>"; };
+		303BE1AF1C0EAC340071FC88 /* ASPPngProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPPngProperties.m; sourceTree = "<group>"; };
+		303BE1B01C0EAC340071FC88 /* ASPPsdProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPPsdProperties.h; sourceTree = "<group>"; };
+		303BE1B11C0EAC340071FC88 /* ASPPsdProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPPsdProperties.m; sourceTree = "<group>"; };
+		303BE1B21C0EAC340071FC88 /* ASPTiffFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPTiffFrame.h; sourceTree = "<group>"; };
+		303BE1B31C0EAC340071FC88 /* ASPTiffFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPTiffFrame.m; sourceTree = "<group>"; };
+		303BE1B41C0EAC340071FC88 /* ASPTiffOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPTiffOptions.h; sourceTree = "<group>"; };
+		303BE1B51C0EAC340071FC88 /* ASPTiffOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPTiffOptions.m; sourceTree = "<group>"; };
+		303BE1B61C0EAC340071FC88 /* ASPTiffProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPTiffProperties.h; sourceTree = "<group>"; };
+		303BE1B71C0EAC340071FC88 /* ASPTiffProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPTiffProperties.m; sourceTree = "<group>"; };
+		303BE1C61C0EAC3E0071FC88 /* ASPImagingApiTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPImagingApiTestCase.m; sourceTree = "<group>"; };
+		303BE1C81C0EAC3E0071FC88 /* aspose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aspose.jpg; sourceTree = "<group>"; };
+		303BE1C91C0EAC3E0071FC88 /* aspose_imaging_for_cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aspose_imaging_for_cloud.png; sourceTree = "<group>"; };
+		303BE1CA1C0EAC3E0071FC88 /* demo.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = demo.tif; sourceTree = "<group>"; };
+		303BE1CB1C0EAC3E0071FC88 /* sample-multi.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "sample-multi.tif"; sourceTree = "<group>"; };
+		303BE1CC1C0EAC3E0071FC88 /* sample.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sample.bmp; sourceTree = "<group>"; };
+		303BE1CD1C0EAC3E0071FC88 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
+		303BE1CE1C0EAC3E0071FC88 /* sample.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.psd; sourceTree = "<group>"; };
+		303BE1CF1C0EAC3E0071FC88 /* sample.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = sample.tif; sourceTree = "<group>"; };
+		303BE1D01C0EAC3E0071FC88 /* test.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = test.bmp; sourceTree = "<group>"; };
+		303BE1D11C0EAC3E0071FC88 /* TestDemo.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TestDemo.tif; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		303BE1701C0EAB5C0071FC88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303BE1891C0EAB5C0071FC88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		303BE16A1C0EAB5C0071FC88 = {
+			isa = PBXGroup;
+			children = (
+				303BE1751C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_C */,
+				303BE18F1C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_CTests */,
+				303BE1741C0EAB5C0071FC88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		303BE1741C0EAB5C0071FC88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				303BE1731C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_C.app */,
+				303BE18C1C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_CTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		303BE1751C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_C */ = {
+			isa = PBXGroup;
+			children = (
+				303BE19B1C0EAC340071FC88 /* imaging */,
+				303BE1791C0EAB5C0071FC88 /* AppDelegate.h */,
+				303BE17A1C0EAB5C0071FC88 /* AppDelegate.m */,
+				303BE17C1C0EAB5C0071FC88 /* ViewController.h */,
+				303BE17D1C0EAB5C0071FC88 /* ViewController.m */,
+				303BE17F1C0EAB5C0071FC88 /* Main.storyboard */,
+				303BE1821C0EAB5C0071FC88 /* Assets.xcassets */,
+				303BE1841C0EAB5C0071FC88 /* LaunchScreen.storyboard */,
+				303BE1871C0EAB5C0071FC88 /* Info.plist */,
+				303BE1761C0EAB5C0071FC88 /* Supporting Files */,
+			);
+			path = Aspose.Imaging_Cloud_SDK_For_Objective_C;
+			sourceTree = "<group>";
+		};
+		303BE1761C0EAB5C0071FC88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				303BE1771C0EAB5C0071FC88 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		303BE18F1C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_CTests */ = {
+			isa = PBXGroup;
+			children = (
+				303BE1C51C0EAC3E0071FC88 /* imaging */,
+				303BE1C71C0EAC3E0071FC88 /* resources */,
+				303BE1921C0EAB5C0071FC88 /* Info.plist */,
+			);
+			path = Aspose.Imaging_Cloud_SDK_For_Objective_CTests;
+			sourceTree = "<group>";
+		};
+		303BE19B1C0EAC340071FC88 /* imaging */ = {
+			isa = PBXGroup;
+			children = (
+				303BE19C1C0EAC340071FC88 /* api */,
+				303BE19F1C0EAC340071FC88 /* model */,
+			);
+			path = imaging;
+			sourceTree = "<group>";
+		};
+		303BE19C1C0EAC340071FC88 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				303BE19D1C0EAC340071FC88 /* ASPImagingApi.h */,
+				303BE19E1C0EAC340071FC88 /* ASPImagingApi.m */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		303BE19F1C0EAC340071FC88 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				303BE1A01C0EAC340071FC88 /* ASPBmpProperties.h */,
+				303BE1A11C0EAC340071FC88 /* ASPBmpProperties.m */,
+				303BE1A21C0EAC340071FC88 /* ASPExifData.h */,
+				303BE1A31C0EAC340071FC88 /* ASPExifData.m */,
+				303BE1A41C0EAC340071FC88 /* ASPGifProperties.h */,
+				303BE1A51C0EAC340071FC88 /* ASPGifProperties.m */,
+				303BE1A61C0EAC340071FC88 /* ASPImagingResponse.h */,
+				303BE1A71C0EAC340071FC88 /* ASPImagingResponse.m */,
+				303BE1A81C0EAC340071FC88 /* ASPJfifData.h */,
+				303BE1A91C0EAC340071FC88 /* ASPJfifData.m */,
+				303BE1AA1C0EAC340071FC88 /* ASPJpegExifData.h */,
+				303BE1AB1C0EAC340071FC88 /* ASPJpegExifData.m */,
+				303BE1AC1C0EAC340071FC88 /* ASPJpegProperties.h */,
+				303BE1AD1C0EAC340071FC88 /* ASPJpegProperties.m */,
+				303BE1AE1C0EAC340071FC88 /* ASPPngProperties.h */,
+				303BE1AF1C0EAC340071FC88 /* ASPPngProperties.m */,
+				303BE1B01C0EAC340071FC88 /* ASPPsdProperties.h */,
+				303BE1B11C0EAC340071FC88 /* ASPPsdProperties.m */,
+				303BE1B21C0EAC340071FC88 /* ASPTiffFrame.h */,
+				303BE1B31C0EAC340071FC88 /* ASPTiffFrame.m */,
+				303BE1B41C0EAC340071FC88 /* ASPTiffOptions.h */,
+				303BE1B51C0EAC340071FC88 /* ASPTiffOptions.m */,
+				303BE1B61C0EAC340071FC88 /* ASPTiffProperties.h */,
+				303BE1B71C0EAC340071FC88 /* ASPTiffProperties.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		303BE1C51C0EAC3E0071FC88 /* imaging */ = {
+			isa = PBXGroup;
+			children = (
+				303BE1C61C0EAC3E0071FC88 /* ASPImagingApiTestCase.m */,
+			);
+			path = imaging;
+			sourceTree = "<group>";
+		};
+		303BE1C71C0EAC3E0071FC88 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				303BE1C81C0EAC3E0071FC88 /* aspose.jpg */,
+				303BE1C91C0EAC3E0071FC88 /* aspose_imaging_for_cloud.png */,
+				303BE1CA1C0EAC3E0071FC88 /* demo.tif */,
+				303BE1CB1C0EAC3E0071FC88 /* sample-multi.tif */,
+				303BE1CC1C0EAC3E0071FC88 /* sample.bmp */,
+				303BE1CD1C0EAC3E0071FC88 /* sample.gif */,
+				303BE1CE1C0EAC3E0071FC88 /* sample.psd */,
+				303BE1CF1C0EAC3E0071FC88 /* sample.tif */,
+				303BE1D01C0EAC3E0071FC88 /* test.bmp */,
+				303BE1D11C0EAC3E0071FC88 /* TestDemo.tif */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		303BE1721C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 303BE1951C0EAB5C0071FC88 /* Build configuration list for PBXNativeTarget "Aspose.Imaging_Cloud_SDK_For_Objective_C" */;
+			buildPhases = (
+				303BE16F1C0EAB5C0071FC88 /* Sources */,
+				303BE1701C0EAB5C0071FC88 /* Frameworks */,
+				303BE1711C0EAB5C0071FC88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aspose.Imaging_Cloud_SDK_For_Objective_C;
+			productName = Aspose.Imaging_Cloud_SDK_For_Objective_C;
+			productReference = 303BE1731C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_C.app */;
+			productType = "com.apple.product-type.application";
+		};
+		303BE18B1C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_CTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 303BE1981C0EAB5C0071FC88 /* Build configuration list for PBXNativeTarget "Aspose.Imaging_Cloud_SDK_For_Objective_CTests" */;
+			buildPhases = (
+				303BE1881C0EAB5C0071FC88 /* Sources */,
+				303BE1891C0EAB5C0071FC88 /* Frameworks */,
+				303BE18A1C0EAB5C0071FC88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				303BE18E1C0EAB5C0071FC88 /* PBXTargetDependency */,
+			);
+			name = Aspose.Imaging_Cloud_SDK_For_Objective_CTests;
+			productName = Aspose.Imaging_Cloud_SDK_For_Objective_CTests;
+			productReference = 303BE18C1C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_CTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		303BE16B1C0EAB5C0071FC88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Aspose;
+				TargetAttributes = {
+					303BE1721C0EAB5C0071FC88 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					303BE18B1C0EAB5C0071FC88 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 303BE1721C0EAB5C0071FC88;
+					};
+				};
+			};
+			buildConfigurationList = 303BE16E1C0EAB5C0071FC88 /* Build configuration list for PBXProject "Aspose.Imaging_Cloud_SDK_For_Objective_C" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 303BE16A1C0EAB5C0071FC88;
+			productRefGroup = 303BE1741C0EAB5C0071FC88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				303BE1721C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_C */,
+				303BE18B1C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_CTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		303BE1711C0EAB5C0071FC88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303BE1DF1C0EAC490071FC88 /* demo.tif in Resources */,
+				303BE1E21C0EAC490071FC88 /* sample.gif in Resources */,
+				303BE1E11C0EAC490071FC88 /* sample.bmp in Resources */,
+				303BE1DD1C0EAC490071FC88 /* aspose.jpg in Resources */,
+				303BE1861C0EAB5C0071FC88 /* LaunchScreen.storyboard in Resources */,
+				303BE1E01C0EAC490071FC88 /* sample-multi.tif in Resources */,
+				303BE1831C0EAB5C0071FC88 /* Assets.xcassets in Resources */,
+				303BE1E61C0EAC490071FC88 /* TestDemo.tif in Resources */,
+				303BE1811C0EAB5C0071FC88 /* Main.storyboard in Resources */,
+				303BE1DE1C0EAC490071FC88 /* aspose_imaging_for_cloud.png in Resources */,
+				303BE1E51C0EAC490071FC88 /* test.bmp in Resources */,
+				303BE1E31C0EAC490071FC88 /* sample.psd in Resources */,
+				303BE1E41C0EAC490071FC88 /* sample.tif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303BE18A1C0EAB5C0071FC88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303BE1DB1C0EAC3E0071FC88 /* test.bmp in Resources */,
+				303BE1D51C0EAC3E0071FC88 /* demo.tif in Resources */,
+				303BE1D91C0EAC3E0071FC88 /* sample.psd in Resources */,
+				303BE1D31C0EAC3E0071FC88 /* aspose.jpg in Resources */,
+				303BE1D41C0EAC3E0071FC88 /* aspose_imaging_for_cloud.png in Resources */,
+				303BE1D61C0EAC3E0071FC88 /* sample-multi.tif in Resources */,
+				303BE1DA1C0EAC3E0071FC88 /* sample.tif in Resources */,
+				303BE1D81C0EAC3E0071FC88 /* sample.gif in Resources */,
+				303BE1DC1C0EAC3E0071FC88 /* TestDemo.tif in Resources */,
+				303BE1D71C0EAC3E0071FC88 /* sample.bmp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		303BE16F1C0EAB5C0071FC88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303BE1BA1C0EAC340071FC88 /* ASPExifData.m in Sources */,
+				303BE1B81C0EAC340071FC88 /* ASPImagingApi.m in Sources */,
+				303BE17E1C0EAB5C0071FC88 /* ViewController.m in Sources */,
+				303BE17B1C0EAB5C0071FC88 /* AppDelegate.m in Sources */,
+				303BE1C31C0EAC340071FC88 /* ASPTiffOptions.m in Sources */,
+				303BE1C11C0EAC340071FC88 /* ASPPsdProperties.m in Sources */,
+				303BE1BB1C0EAC340071FC88 /* ASPGifProperties.m in Sources */,
+				303BE1781C0EAB5C0071FC88 /* main.m in Sources */,
+				303BE1C41C0EAC340071FC88 /* ASPTiffProperties.m in Sources */,
+				303BE1C21C0EAC340071FC88 /* ASPTiffFrame.m in Sources */,
+				303BE1BE1C0EAC340071FC88 /* ASPJpegExifData.m in Sources */,
+				303BE1BD1C0EAC340071FC88 /* ASPJfifData.m in Sources */,
+				303BE1BC1C0EAC340071FC88 /* ASPImagingResponse.m in Sources */,
+				303BE1BF1C0EAC340071FC88 /* ASPJpegProperties.m in Sources */,
+				303BE1B91C0EAC340071FC88 /* ASPBmpProperties.m in Sources */,
+				303BE1C01C0EAC340071FC88 /* ASPPngProperties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303BE1881C0EAB5C0071FC88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303BE1D21C0EAC3E0071FC88 /* ASPImagingApiTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		303BE18E1C0EAB5C0071FC88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 303BE1721C0EAB5C0071FC88 /* Aspose.Imaging_Cloud_SDK_For_Objective_C */;
+			targetProxy = 303BE18D1C0EAB5C0071FC88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		303BE17F1C0EAB5C0071FC88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				303BE1801C0EAB5C0071FC88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		303BE1841C0EAB5C0071FC88 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				303BE1851C0EAB5C0071FC88 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		303BE1931C0EAB5C0071FC88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		303BE1941C0EAB5C0071FC88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		303BE1961C0EAB5C0071FC88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Aspose.Imaging_Cloud_SDK_For_Objective_C/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aspose.Aspose-Imaging-Cloud-SDK-For-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		303BE1971C0EAB5C0071FC88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Aspose.Imaging_Cloud_SDK_For_Objective_C/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aspose.Aspose-Imaging-Cloud-SDK-For-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		303BE1991C0EAB5C0071FC88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Aspose.Imaging_Cloud_SDK_For_Objective_CTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aspose.Aspose-Imaging-Cloud-SDK-For-Objective-CTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aspose.Imaging_Cloud_SDK_For_Objective_C.app/Aspose.Imaging_Cloud_SDK_For_Objective_C";
+			};
+			name = Debug;
+		};
+		303BE19A1C0EAB5C0071FC88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Aspose.Imaging_Cloud_SDK_For_Objective_CTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aspose.Aspose-Imaging-Cloud-SDK-For-Objective-CTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aspose.Imaging_Cloud_SDK_For_Objective_C.app/Aspose.Imaging_Cloud_SDK_For_Objective_C";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		303BE16E1C0EAB5C0071FC88 /* Build configuration list for PBXProject "Aspose.Imaging_Cloud_SDK_For_Objective_C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303BE1931C0EAB5C0071FC88 /* Debug */,
+				303BE1941C0EAB5C0071FC88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		303BE1951C0EAB5C0071FC88 /* Build configuration list for PBXNativeTarget "Aspose.Imaging_Cloud_SDK_For_Objective_C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303BE1961C0EAB5C0071FC88 /* Debug */,
+				303BE1971C0EAB5C0071FC88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		303BE1981C0EAB5C0071FC88 /* Build configuration list for PBXNativeTarget "Aspose.Imaging_Cloud_SDK_For_Objective_CTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303BE1991C0EAB5C0071FC88 /* Debug */,
+				303BE19A1C0EAB5C0071FC88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 303BE16B1C0EAB5C0071FC88 /* Project object */;
+}
