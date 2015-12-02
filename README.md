@@ -12,6 +12,7 @@ Directory | Description
 [Java SDK](SDKs/Aspose.Imaging_Cloud_SDK_for_Java)  |  Aspose.Imaging for Cloud Java SDK.
 [PHP SDK](SDKs/Aspose.Imaging_Cloud_SDK_for_PHP)  |  Aspose.Imaging for Cloud PHP SDK.
 [Python SDK](SDKs/Aspose.Imaging_Cloud_SDK_for_Python)  |  Aspose.Imaging for Cloud Python SDK.
+[iOS SDK](https://github.com/asposeimaging/Aspose_Imaging_Cloud/tree/master/SDKs/Aspose.Imaging_Cloud_SDK_For_Objective_C)  |  Aspose.Imaging for Cloud Objective C SDK.
 [Java SDK Examples](Examples/Java/SDK)  |  Examples using Aspose.Imaging for Cloud Java SDK.
 
 ## Resources
