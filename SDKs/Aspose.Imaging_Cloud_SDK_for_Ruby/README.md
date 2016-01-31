@@ -52,10 +52,10 @@ class ImagingUsage
 end
 ```
 ## Unit Tests
-Aspose Imaging SDK includes a suite of unit tests within the [test]() subdirectory. These Unit Tests also serves as examples of how to use the Aspose Imaging SDK.
+Aspose Imaging SDK includes a suite of unit tests within the [test](https://github.com/asposeimaging/Aspose_Imaging_Cloud/blob/master/SDKs/Aspose.Imaging_Cloud_SDK_for_Ruby/test/imaging_tests.rb) subdirectory. These Unit Tests also serves as examples of how to use the Aspose Imaging SDK.
 
 ## Contact
 Your feedback is very important to us. Please email us all your queries and feedback at marketplace@aspose.com.
 
 ## License
-Aspose Imaging SDK is available under the MIT license. See the [LICENSE]() file for more info.
+Aspose Imaging SDK is available under the MIT license. See the [LICENSE](https://github.com/asposeimaging/Aspose_Imaging_Cloud/blob/master/SDKs/Aspose.Imaging_Cloud_SDK_for_Ruby/LICENSE) file for more info.
