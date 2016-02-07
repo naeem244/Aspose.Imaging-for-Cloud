@@ -9,11 +9,10 @@ This repository contains examples and SDKs for [Aspose.Imaging for Cloud](http:/
 
 Directory | Description
 --------- | -----------
-[Java SDK](SDKs/Aspose.Imaging_Cloud_SDK_for_Java)  |  Aspose.Imaging Cloud SDK for Java.
-[PHP SDK](SDKs/Aspose.Imaging_Cloud_SDK_for_PHP)  |  Aspose.Imaging Cloud SDK for PHP.
-[Python SDK](SDKs/Aspose.Imaging_Cloud_SDK_for_Python)  |  Aspose.Imaging Cloud SDK for Python.
-[iOS SDK](https://github.com/asposeimaging/Aspose_Imaging_Cloud/tree/master/SDKs/Aspose.Imaging_Cloud_SDK_For_Objective_C)  |  Aspose.Imaging Cloud SDK for Objective C.
-[Java SDK Examples](Examples/Java/SDK)  |  Examples using Aspose.Imaging for Cloud Java SDK.
+Directory | Description
+--------- | -----------
+[Examples](Examples)  | A collection of examples that help you learn how to use product features
+[SDKs](SDKs)  | SDKs make it easy to use Cloud REST APIs.
 
 ## Resources
 
