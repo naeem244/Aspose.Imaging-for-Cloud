@@ -9,8 +9,6 @@ This repository contains examples and SDKs for [Aspose.Imaging for Cloud](http:/
 
 Directory | Description
 --------- | -----------
-Directory | Description
---------- | -----------
 [Examples](Examples)  | A collection of examples that help you learn how to use product features
 [SDKs](SDKs)  | SDKs make it easy to use Cloud REST APIs.
 
