@@ -2069,6 +2069,233 @@ ImagingApi.prototype.GetUpdatedImage = function(name, format, newWidth, newHeigh
   }
     
 
+/**
+* PostImageGif
+* Update parameters of gif image.
+*
+* @param  (String) backgroundColorIndex  -  Index of the background color. (optional) 
+* @param  (array) colorResolution  -  Color resolution. (optional) 
+* @param  (array) hasTrailer  -  Specifies if image has trailer. (optional) 
+* @param  (Integer) interlaced  -  Specifies if image is interlaced. (optional) 
+* @param  (Boolean) isPaletteSorted  -  Specifies if palette is sorted. (optional) 
+* @param  (String) pixelAspectRatio  -  Pixel aspect ratio. (optional) 
+* @param  (Boolean) fromScratch  -  Specifies where additional parameters we do not support should be taken from. If this is true â€“ they will be taken from default values for standard image, if it is false â€“ they will be saved from current image. Default is false. (optional) 
+* @param  (String) outPath  -  Path to updated file, if this is empty, response contains streamed image. (optional) 
+* @param  (File) file  -   (required) 
+* @returns ResponseMessage (Map)
+*/
+ImagingApi.prototype.PostImageGif = function(backgroundColorIndex, colorResolution, hasTrailer, interlaced, isPaletteSorted, pixelAspectRatio, fromScratch, outPath, file, callback) {
+
+    var self = this;
+	        	
+	
+	if( typeof file === 'undefined' || file === null && file === ''){
+		throw new Error('missing required file.');
+    }	
+	var resourcePath = '/imaging/gif/?appSid={appSid}&amp;backgroundColorIndex={backgroundColorIndex}&amp;colorResolution={colorResolution}&amp;hasTrailer={hasTrailer}&amp;interlaced={interlaced}&amp;isPaletteSorted={isPaletteSorted}&amp;pixelAspectRatio={pixelAspectRatio}&amp;fromScratch={fromScratch}&amp;outPath={outPath}';
+	
+	resourcePath = resourcePath.replace(new RegExp('\\*', 'g'), "");
+	resourcePath = resourcePath.replace(new RegExp('&amp;', 'g'), '&');
+	resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}");
+	
+	
+	if(typeof backgroundColorIndex !== 'undefined' &&  backgroundColorIndex !== null && backgroundColorIndex!== ''){            
+			resourcePath = resourcePath.replace("{" + "backgroundColorIndex" + "}" , backgroundColorIndex);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]backgroundColorIndex.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof colorResolution !== 'undefined' &&  colorResolution !== null && colorResolution!== ''){            
+			resourcePath = resourcePath.replace("{" + "colorResolution" + "}" , colorResolution);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]colorResolution.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof hasTrailer !== 'undefined' &&  hasTrailer !== null && hasTrailer!== ''){            
+			resourcePath = resourcePath.replace("{" + "hasTrailer" + "}" , hasTrailer);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]hasTrailer.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof interlaced !== 'undefined' &&  interlaced !== null && interlaced!== ''){            
+			resourcePath = resourcePath.replace("{" + "interlaced" + "}" , interlaced);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]interlaced.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof isPaletteSorted !== 'undefined' &&  isPaletteSorted !== null && isPaletteSorted!== ''){            
+			resourcePath = resourcePath.replace("{" + "isPaletteSorted" + "}" , isPaletteSorted);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]isPaletteSorted.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof pixelAspectRatio !== 'undefined' &&  pixelAspectRatio !== null && pixelAspectRatio!== ''){            
+			resourcePath = resourcePath.replace("{" + "pixelAspectRatio" + "}" , pixelAspectRatio);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]pixelAspectRatio.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof fromScratch !== 'undefined' &&  fromScratch !== null && fromScratch!== ''){            
+			resourcePath = resourcePath.replace("{" + "fromScratch" + "}" , fromScratch);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]fromScratch.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof outPath !== 'undefined' &&  outPath !== null && outPath!== ''){            
+			resourcePath = resourcePath.replace("{" + "outPath" + "}" , outPath);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]outPath.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	
+	if(this.config.debug){console.log('resourcePath :: ' + resourcePath);}
+	
+    method = 'POST'
+    queryParams = {}
+    headerParams = {}
+    formParams = {}
+    files = {}
+	postData = null;
+    
+	if(file !== 'undefined' && file !== null && file !== ''){
+		postData = fs.readFileSync(file)
+	}
+	
+	headerParams['Accept'] = 'application/xml,application/octet-stream'
+    headerParams['Content-Type'] = 'multipart/form-data'
+
+	return apiClient.InvokeAPI(resourcePath, method, queryParams, postData, headerParams, files, callback);
+  }
+
+/**
+* PostImageOperationsSaveAs
+* Perform scaling, cropping and flipping of an image in single request. Image is passed as request body.
+*
+* @param  (String) format  -  Save image in another format. By default format remains the same (required) 
+* @param  (String) newWidth  -  New Width of the scaled image. (required) 
+* @param  (String) newHeight  -  New height of the scaled image. (required) 
+* @param  (String) x  -  X position of start point for cropping rectangle (required) 
+* @param  (String) y  -  Y position of start point for cropping rectangle (required) 
+* @param  (String) rectWidth  -  Width of cropping rectangle (required) 
+* @param  (String) rectHeight  -  Height of cropping rectangle (required) 
+* @param  (String) rotateFlipMethod  -  RotateFlip method. Default is RotateNoneFlipNone. (required) 
+* @param  (String) outPath  -  Path to updated file, if this is empty, response contains streamed image. (optional) 
+* @param  (File) file  -   (required) 
+* @returns ResponseMessage (Map)
+*/
+ImagingApi.prototype.PostImageOperationsSaveAs = function(format, newWidth, newHeight, x, y, rectWidth, rectHeight, rotateFlipMethod, outPath, file, callback) {
+
+    var self = this;
+	
+	if( typeof format === 'undefined' || format === null && format === ''){
+		throw new Error('missing required parameters.');
+    } 
+	if( typeof newWidth === 'undefined' || newWidth === null && newWidth === ''){
+		throw new Error('missing required parameters.');
+    } 
+	if( typeof newHeight === 'undefined' || newHeight === null && newHeight === ''){
+		throw new Error('missing required parameters.');
+    } 
+	if( typeof x === 'undefined' || x === null && x === ''){
+		throw new Error('missing required parameters.');
+    } 
+	if( typeof y === 'undefined' || y === null && y === ''){
+		throw new Error('missing required parameters.');
+    } 
+	if( typeof rectWidth === 'undefined' || rectWidth === null && rectWidth === ''){
+		throw new Error('missing required parameters.');
+    } 
+	if( typeof rectHeight === 'undefined' || rectHeight === null && rectHeight === ''){
+		throw new Error('missing required parameters.');
+    } 
+	if( typeof rotateFlipMethod === 'undefined' || rotateFlipMethod === null && rotateFlipMethod === ''){
+		throw new Error('missing required parameters.');
+    }  	
+	
+	if( typeof file === 'undefined' || file === null && file === ''){
+		throw new Error('missing required file.');
+    }	
+	var resourcePath = '/imaging/updateImage/?appSid={appSid}&amp;toFormat={toFormat}&amp;newWidth={newWidth}&amp;newHeight={newHeight}&amp;x={x}&amp;y={y}&amp;rectWidth={rectWidth}&amp;rectHeight={rectHeight}&amp;rotateFlipMethod={rotateFlipMethod}&amp;outPath={outPath}';
+	
+	resourcePath = resourcePath.replace(new RegExp('\\*', 'g'), "");
+	resourcePath = resourcePath.replace(new RegExp('&amp;', 'g'), '&');
+	resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}");
+	
+	
+	if(typeof format !== 'undefined' &&  format !== null && format!== ''){            
+			resourcePath = resourcePath.replace("{" + "format" + "}" , format);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]format.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof newWidth !== 'undefined' &&  newWidth !== null && newWidth!== ''){            
+			resourcePath = resourcePath.replace("{" + "newWidth" + "}" , newWidth);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]newWidth.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof newHeight !== 'undefined' &&  newHeight !== null && newHeight!== ''){            
+			resourcePath = resourcePath.replace("{" + "newHeight" + "}" , newHeight);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]newHeight.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof x !== 'undefined' &&  x !== null && x!== ''){            
+			resourcePath = resourcePath.replace("{" + "x" + "}" , x);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]x.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof y !== 'undefined' &&  y !== null && y!== ''){            
+			resourcePath = resourcePath.replace("{" + "y" + "}" , y);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]y.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof rectWidth !== 'undefined' &&  rectWidth !== null && rectWidth!== ''){            
+			resourcePath = resourcePath.replace("{" + "rectWidth" + "}" , rectWidth);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]rectWidth.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof rectHeight !== 'undefined' &&  rectHeight !== null && rectHeight!== ''){            
+			resourcePath = resourcePath.replace("{" + "rectHeight" + "}" , rectHeight);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]rectHeight.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof rotateFlipMethod !== 'undefined' &&  rotateFlipMethod !== null && rotateFlipMethod!== ''){            
+			resourcePath = resourcePath.replace("{" + "rotateFlipMethod" + "}" , rotateFlipMethod);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]rotateFlipMethod.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	if(typeof outPath !== 'undefined' &&  outPath !== null && outPath!== ''){            
+			resourcePath = resourcePath.replace("{" + "outPath" + "}" , outPath);
+	}else{
+		resourcePath = resourcePath.replace(new RegExp('[&?]outPath.*?(?=&|\\?|$)', 'g'), "");
+		}
+	
+	
+	if(this.config.debug){console.log('resourcePath :: ' + resourcePath);}
+	
+    method = 'POST'
+    queryParams = {}
+    headerParams = {}
+    formParams = {}
+    files = {}
+	postData = null;
+    
+	if(file !== 'undefined' && file !== null && file !== ''){
+		postData = fs.readFileSync(file)
+	}
+	
+	headerParams['Accept'] = 'application/xml,application/octet-stream'
+    headerParams['Content-Type'] = 'multipart/form-data'
+
+	return apiClient.InvokeAPI(resourcePath, method, queryParams, postData, headerParams, files, callback);
+  }
+
 module.exports = ImagingApi
 
 
