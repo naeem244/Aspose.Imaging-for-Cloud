@@ -1,0 +1,9 @@
+{
+
+  "name": "SdkExamples",
+  "private": true,
+  "dependencies": {
+    "asposeimagingcloud": "^1.0.0",
+    "asposestoragecloud": "^1.0.1"
+  }
+}
