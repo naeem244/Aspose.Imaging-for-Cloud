@@ -2,7 +2,7 @@
 This repository contains examples and SDKs for [Aspose.Imaging for Cloud](http://www.aspose.com/cloud/imaging-api.aspx).
 
 <p align="center">
-  <a title="Download ZIP" href="https://github.com/asposeimaging/Aspose_Imaging_Cloud/archive/master.zip">
+  <a title="Download ZIP" href="https://github.com/aspose-imaging/Aspose.Imaging-for-Cloud/archive/master.zip">
      <img src="http://i.imgur.com/hwNhrGZ.png" />
   </a>
 </p>
