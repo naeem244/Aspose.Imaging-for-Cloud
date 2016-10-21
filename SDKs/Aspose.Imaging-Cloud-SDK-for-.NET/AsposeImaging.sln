@@ -1,10 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsposeImaging", "AsposeImaging.csproj", "{63B4121D-76BB-4300-9157-05665EA2E426}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagingTest", "ImagingTest\ImagingTest.csproj", "{4BA1BA63-8DF8-4098-B82E-A220F9CF357D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5D6BF3DB-7A33-4FE2-A83E-0FA98476FB6B}"
 	ProjectSection(SolutionItems) = preProject
 		AsposeImaging.vsmdi = AsposeImaging.vsmdi
@@ -12,10 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsposeImaging", "AsposeImaging.csproj", "{63B4121D-76BB-4300-9157-05665EA2E426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagingTest", "ImagingTest\ImagingTest.csproj", "{4BA1BA63-8DF8-4098-B82E-A220F9CF357D}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = AsposeImaging.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
